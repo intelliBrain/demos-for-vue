@@ -34,7 +34,7 @@ export default {
    createNewTask: function() {
      if (this.newTask === '') { return }
 
-     let promise = appwrite.database.createDocument('CollectionID', {
+     let promise = appwrite.database.createDocument('60686ca487617', {
        task: this.newTask,
        done: false,
        date: new Date()
@@ -48,7 +48,7 @@ export default {
       });
    },
    fetchTasks: function() {
-    let promise = appwrite.database.listDocuments('CollectionID');
+    let promise = appwrite.database.listDocuments('60686ca487617');
 
     promise.then((response) => {
         console.log(response); // Success

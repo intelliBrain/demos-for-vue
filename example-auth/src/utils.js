@@ -2,7 +2,7 @@ import * as Appwrite from 'appwrite'
 
 const appwrite = new Appwrite()
 appwrite
-  .setEndpoint('https://9680b3e.online-server.cloud/v1')
-  .setProject('5f567e45491bb')
+  .setEndpoint('https://appwrite.intellibrain.ch/v1')
+  .setProject('6068631cdcace')
 
 export { appwrite }

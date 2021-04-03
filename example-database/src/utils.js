@@ -2,15 +2,16 @@ import * as Appwrite from 'appwrite'
 
 const appwrite = new Appwrite()
 appwrite
-  .setEndpoint('ENDPOINT URL') // Replace this with your endpoint
-  .setProject('PROJECTID') // Replace this with your projectID
+  .setEndpoint('https://appwrite.intellibrain.ch/v1')
+  .setProject('6068631cdcace')
 
-  let promise = sdk.account.createSession('emailaddress', 'password');
+let promise = appwrite.account.createSession('test1@intellibrain.33mail.com', '123456');
 
-  promise.then(function (response) {
-      console.log(`Successfully logged in as: ${response.name}`); // Success
-  }, function (error) {
-      console.error(error); // Failure
-  });
+promise.then(function (response) {
+    let json = JSON.stringify(response)
+    console.log(`Successfully logged in as: ${json}`); // Success
+}, function (error) {
+    console.error(error); // Failure
+});
 
 export { appwrite }
